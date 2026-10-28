@@ -40,5 +40,5 @@ V/V 2091526:    $OrphanFiles
 └─$ icat -r -o 63 pomkin.img 8 > ._pomkin_recovered.jpg   
 ```
 6. Was then able to open the first image and got the flag. 
-![flag](attachments/flag.png)
+![lost-pumpkins-flag](lost-pumpkins-flag.png)
 7. FLAG: `CTFkom{DUm_ahh_p0mkin}`
