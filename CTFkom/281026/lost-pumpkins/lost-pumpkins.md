@@ -26,7 +26,11 @@ Units are in 512-byte sectors
 4. By running the following command, I am able to obtain information about the file structure from the offset obtained earlier. The most interesting files here are the `.jpg` files with inode 6 and 8.
 ```
 └─$ fls -o 63 pomkin.img 
-r/r 3:  POMKIN      (Volume Label Entry)                                         d/d 5:  .fseventsd                                                               r/r * 6:        _omkin.jpg                                                       r/r * 8:        ._pomkin.jpg                                                     v/v 2091523:    $MBR                                                             
+r/r 3:  POMKIN      (Volume Label Entry)
+d/d 5:  .fseventsd
+r/r * 6:        _omkin.jpg
+r/r * 8:        ._pomkin.jpg
+v/v 2091523:    $MBR
 v/v 2091524:    $FAT1
 v/v 2091525:    $FAT2
 V/V 2091526:    $OrphanFiles
