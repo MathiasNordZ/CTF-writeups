@@ -39,5 +39,6 @@ V/V 2091526:    $OrphanFiles
 ┌──(nordz㉿kali)-[~/CTFkom/281026]
 └─$ icat -r -o 63 pomkin.img 6 > ._pomkin_recovered.jpg   
 ```
-6. Was then able to open the first image and got the flag. ![[Pasted image 20261028235241.png]]
+6. Was then able to open the first image and got the flag. 
+![[Pasted image 20261028235955.png]]
 7. FLAG: `CTFkom{DUm_ahh_p0mkin}`
