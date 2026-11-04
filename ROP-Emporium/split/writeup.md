@@ -1,5 +1,5 @@
 1. Checked file information. It is a 64-bit LSB executable (x86-64).![step1.png](images/step1.png)
-2. Checked security information. No stack canary, NX enabled and no PIE. ![[Pasted image 20261105000738.png]]
+2. Checked security information. No stack canary, NX enabled and no PIE.![step2.png](images/step2.png)
 3. Ran the binary to see what it does.![step3.png](images/step3.png)
 4. Decompiled the binary in IDA. Most interesting line is the `pwnme()` function.![step4.png](images/step4.png)
 5. Inspected the function. As we can see the function reads `0x60` bytes into the buffer `s`, which is only `32` bytes. This read makes the program vulnerable to buffer overflow. Since the NX bit is enabled we cannot execute shellcode on the stack, so we will most likely have to find a gadget that we can utilize to call `system()` with the string `/bin/cat flag.txt`.![step5.png](images/step5.png)
