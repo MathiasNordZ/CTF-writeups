@@ -14,8 +14,8 @@ Every push (obsidian-git does this automatically) rebuilds the site.
 
 ## Adding a writeup
 
-Create a folder for the challenge, drop in your markdown + screenshots, and add
-this front matter to the markdown file:
+Copy **`TEMPLATE.md`** (top of this repo — visible in Obsidian too), place it in a
+new folder for the challenge, and fill in the front matter:
 
 ```yaml
 ---
