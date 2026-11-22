@@ -110,5 +110,11 @@ undefined8 check(char *userInput)
 }
 ```
 
-
+6. Success with the input `1999999999`
+```
+┌──(kali㉿kali)-[~/Downloads/guess_the_password]
+└─$ ./guess_the_password        
+What is the password:1999999999
+Correct
+```
 
