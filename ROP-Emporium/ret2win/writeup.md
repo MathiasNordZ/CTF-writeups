@@ -2,7 +2,7 @@
 
 Writeup for the 64-bit **ret2win** challenge from [ROP Emporium](https://ropemporium.com/challenge/ret2win.html).
 
-1. Opened the binary in Ghidra.
+1. Opened the binary in Ghidra. 
 
     ![step1.png](images/step1.png)
 
