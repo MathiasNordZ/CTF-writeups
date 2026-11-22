@@ -104,9 +104,6 @@ a:hover { text-decoration: underline; }
 }
 .brand:hover { color: var(--accent); text-decoration: none; }
 
-.site-nav a { margin-left: 18px; color: var(--dim); }
-.site-nav a:hover { color: var(--accent); }
-
 main { flex: 1; }
 
 .site-foot {
@@ -192,6 +189,30 @@ main { flex: 1; }
 }
 
 .row-date {
+  color: var(--dim);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+// ── homepage stats ────────────────────────────────────────────────────
+
+.stats { margin-top: 56px; }
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 7px 0;
+}
+.stat-tags { flex-shrink: 0; min-width: 10.5ch; }
+.bar {
+  display: inline-block;
+  height: 0.62em;
+  min-width: 1ch;
+  background: currentColor;
+  border-radius: 2px;
+}
+.stat-count {
   color: var(--dim);
   font-size: 0.8rem;
   flex-shrink: 0;

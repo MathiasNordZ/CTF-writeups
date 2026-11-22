@@ -35,6 +35,17 @@ category_order:
   - ROP Emporium
   - Crackmes
 
+# Challenge types that get a color + a row in the homepage stats.
+# (colors live in assets/css/main.scss — .t-<tag>)
+known_tags:
+  - pwn
+  - rev
+  - forensics
+  - network
+  - crypto
+  - web
+  - misc
+
 # Keep the published site clean (dotfiles like .obsidian are already
 # skipped automatically).
 exclude:

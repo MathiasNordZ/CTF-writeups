@@ -1,0 +1,23 @@
+{% comment %}
+  Bar chart of challenge categories (tags), rendered from front matter.
+  The bar width is proportional to the most common tag. Colors come from
+  the existing .t-<tag> classes; new tags need one CSS line (see README).
+{% endcomment %}
+{% assign max = 1 %}
+{% for t in site.known_tags %}
+  {% assign hits = writeups | where_exp: "w", "w.tags contains t" %}
+  {% if hits.size > max %}{% assign max = hits.size %}{% endif %}
+{% endfor %}
+
+{% for t in site.known_tags %}
+  {% assign hits = writeups | where_exp: "w", "w.tags contains t" %}
+  {% if hits.size > 0 %}
+    {% assign blocks = hits.size | times: 20 | divided_by: max %}
+    {% if blocks < 1 %}{% assign blocks = 1 %}{% endif %}
+    <p class="stat-row">
+      <span class="stat-tags"><span class="tag t-{{ t | slugify }}">{{ t }}</span></span>
+      <span class="bar t-{{ t | slugify }}" style="width: {{ blocks }}ch" aria-hidden="true"></span>
+      <span class="stat-count">{{ hits.size }}</span>
+    </p>
+  {% endif %}
+{% endfor %}
