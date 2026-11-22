@@ -1,3 +1,13 @@
+---
+layout: writeup
+title: Lost Pumpkins
+category: CTFkom 2026
+tags: [forensics]
+date: 2026-10-28
+permalink: /CTFkom/281026/lost-pumpkins/
+description: Carving deleted files out of a FAT32 disk image with Sleuthkit.
+---
+
 **Task Description:**
 HELP! I accidentally deleted my pumpkins, its almost halloween! I need to have my pumpkins D:
 
@@ -36,6 +46,7 @@ v/v 2091525:    $FAT2
 V/V 2091526:    $OrphanFiles
 ```
 5. Following commands are able to extract the inodes back into `.jpg` files.
+
 ```
 ┌──(nordz㉿kali)-[~/CTFkom/281026]
 └─$ icat -r -o 63 pomkin.img 6 > _omkin_recovered.jpg

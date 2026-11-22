@@ -1,3 +1,13 @@
+---
+layout: writeup
+title: "Etherhiding 3: On the Chain"
+category: CTFkom 2026
+tags: [network]
+date: 2026-10-29
+permalink: /CTFkom/281026/etherhiding-3-on-the-chain/
+description: Following the Etherhiding chain from HTTP statistics to the pivot URL.
+---
+
 **Task Description:**
 
 **Solution Steps:**

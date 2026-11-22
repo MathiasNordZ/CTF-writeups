@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="theme-color" content="#0b0f14">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:type" content="{% if page.layout == 'writeup' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ site.baseurl }}/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-head">
+      <a class="brand" href="{{ site.baseurl }}/">mathiasnordz<span class="dim">:</span>~<span class="cursor">▊</span></a>
+      <nav class="site-nav">
+        <a href="{{ site.baseurl }}/">writeups</a>
+        <a href="https://github.com/MathiasNordZ/CTF-writeups">source</a>
+      </nav>
+    </header>
+
+    {{ content }}
+
+    <footer class="site-foot">
+      <p><span class="dim">$ exit<span class="cursor">▊</span></span></p>
+      <p class="dim">
+        © {{ site.time | date: "%Y" }} MathiasNordZ
+        <span class="sep">·</span> <a href="https://github.com/MathiasNordZ/CTF-writeups">view source</a>
+        <span class="sep">·</span> built with jekyll
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    // Highlight flag-looking inline code (e.g. CTFkom{...}).
+    document.querySelectorAll('p code, li code, pre code').forEach(function (el) {
+      if (/^[A-Za-z0-9_]{2,}\{.+\}$/.test(el.textContent.trim())) {
+        el.classList.add('flag');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+# ── MathiasNordZ :: CTF writeups ──────────────────────────────────────
+# Jekyll site for GitHub Pages (project site → /CTF-writeups).
+# Add a `writeup`-layout markdown file anywhere and it shows up on
+# the homepage. See README.md for the front matter template.
+
+title: "MathiasNordZ :: CTF writeups"
+description: >-
+  Writeups from CTFs, wargames and crackmes — pwn, rev, forensics
+  and network challenges.
+url: "https://mathiasnordz.github.io"
+baseurl: "/CTF-writeups"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+    span:
+      line_numbers: false
+
+permalink: pretty
+
+plugins:
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+# Homepage groups appear in this order. Categories not listed here
+# are appended afterwards, grouped automatically.
+category_order:
+  - CTFkom 2026
+  - ROP Emporium
+  - Crackmes
+
+# Keep the published site clean (dotfiles like .obsidian are already
+# skipped automatically).
+exclude:
+  - .obsidian
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - _site
+  - .jekyll-cache

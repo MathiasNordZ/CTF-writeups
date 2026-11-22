@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article class="post">
+  <p class="crumb">
+    <span class="dim">nordz@ctf:</span><a href="{{ site.baseurl }}/">~/ctf-writeups</a><span class="dim">/</span><span>{{ page.category }}</span><span class="dim">$</span>
+  </p>
+
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  <p class="meta">
+    {% for t in page.tags %}<span class="tag t-{{ t | slugify }}">{{ t }}</span> {% endfor %}
+    <span class="sep">·</span> {{ page.date | date: "%Y-%m-%d" }}
+    {% assign mins = page.content | strip_html | number_of_words | divided_by: 200 %}
+    {% if mins < 1 %}{% assign mins = 1 %}{% endif %}
+    <span class="sep">·</span> {{ mins }} min read
+  </p>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  <p class="back"><a href="{{ site.baseurl }}/">← cd ~/ctf-writeups</a></p>
+</article>

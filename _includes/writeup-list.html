@@ -1,0 +1,13 @@
+<ul class="tree-list">
+  {% for w in items %}
+    <li class="tree-row{% if forloop.last %} last{% endif %}">
+      <span class="branch" aria-hidden="true">{% if forloop.last %}└──{% else %}├──{% endif %}</span>
+      <span class="row-tags">
+        {%- for t in w.tags %}<span class="tag t-{{ t | slugify }}">{{ t }}</span> {% endfor -%}
+      </span>
+      <a class="row-title" href="{{ w.url | relative_url }}">{{ w.title }}</a>
+      <span class="leader" aria-hidden="true"></span>
+      <span class="row-date">{{ w.date | date: "%Y-%m-%d" }}</span>
+    </li>
+  {% endfor %}
+</ul>

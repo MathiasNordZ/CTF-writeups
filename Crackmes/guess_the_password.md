@@ -1,3 +1,13 @@
+---
+layout: writeup
+title: Guess The Password
+category: Crackmes
+tags: [rev]
+date: 2026-11-22
+permalink: /Crackmes/guess_the_password/
+description: Reversing a small ELF binary in Ghidra to recover the password-check logic.
+---
+
 1.  Initially checked the file information to understand what we are working with.
 ```
 ┌──(kali㉿kali)-[~/Downloads/guess_the_password]
@@ -61,7 +71,8 @@ Dump of assembler code for function main:
 ```
 
 4. Decomplied the binary in Ghidra and opened the main function.  As we can see there is a buffer with a size of 264 bytes. `fgets` passes the user input from standard input into the buffer. The user input is then passed into a function called `check` which is the password check function.
-```C
+
+```c
 undefined8 main(void)
 
 {
@@ -92,7 +103,8 @@ undefined8 main(void)
 ```
 
 5. The main logic of the function is to check if the length of the input is 10 characters, if it contains an occurrence of `1` and if index `4` is equal to `9`. If all these are correct the variable `uVar1` is set equal to one. The function then returns back to main. In main, the if statement `iVar == 1` is true and it prints correct.
-```C
+
+```c
 undefined8 check(char *userInput)
 
 {

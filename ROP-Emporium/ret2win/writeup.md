@@ -1,4 +1,12 @@
-# Ret2Win — ROP Emporium
+---
+layout: writeup
+title: Ret2Win
+category: ROP Emporium
+tags: [pwn]
+date: 2026-10-30
+permalink: /ROP-Emporium/ret2win/
+description: Classic 64-bit buffer overflow — overwriting the return address to reach ret2win().
+---
 
 Writeup for the 64-bit **ret2win** challenge from [ROP Emporium](https://ropemporium.com/challenge/ret2win.html).
 

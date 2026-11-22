@@ -1,4 +1,12 @@
-# Split — ROP Emporium
+---
+layout: writeup
+title: Split
+category: ROP Emporium
+tags: [pwn]
+date: 2026-11-05
+permalink: /ROP-Emporium/split/
+description: Bypassing NX by ROP-chaining a pop rdi gadget into system("/bin/cat flag.txt").
+---
 
 Writeup for the 64-bit **Split** challenge from [ROP Emporium](https://ropemporium.com/challenge/split.html).
 

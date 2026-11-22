@@ -1,3 +1,13 @@
+---
+layout: writeup
+title: Etherhiding 2
+category: CTFkom 2026
+tags: [network]
+date: 2026-10-29
+permalink: /CTFkom/281026/etherhiding-2/
+description: Parsing a Google Analytics session cookie out of the challenge pcap in Wireshark.
+---
+
 **Task Description:**
 How many sessions does the gaming site's analytics cookie indicate? Submit the decimal session count, not the cookie name or the complete cookie.
 
